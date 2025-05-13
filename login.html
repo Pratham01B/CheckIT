@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | CheckIT</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="captcha.js" defer></script>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Login to CheckIT</h2>
+    <form action="login_process.jsp" method="post" onsubmit="return validateCaptcha('loginCaptchaText', 'loginCaptchaInput')">
+<label>Email</label>
+<input
+  type="email"
+  name="email"
+  required
+  pattern="^[a-zA-Z0-9._%+-]+@acropolis\.in$"
+  title="Only @acropolis.in emails are allowed"
+/>
+      <label>Password</label>
+      <input type="password" name="password" required />
+      <label>Enter CAPTCHA:</label>
+        <div class="captcha-box" id="loginCaptchaText"></div>
+        <input type="text" id="loginCaptchaInput" required />
+      <button type="submit">Login</button>
+    </form>
+    <p class="switch-link"><center>Don't have an account? <a href="signup.html">Create one</a></center></p>
+  </div>
+</body>
+</html>

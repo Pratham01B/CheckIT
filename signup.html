@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up | CheckIT</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="captcha.js" defer></script>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Sign Up for CheckIT</h2>
+    <form onsubmit="return validateCaptcha('signupCaptchaText', 'signupCaptchaInput')" action="signup_process.jsp" method="POST">
+      <label>Select Role</label>
+      <select name="role" required>
+        <option value="">--Select--</option>
+        <option value="student">Student</option>
+        <option value="faculty">Faculty</option>
+        <option value="admin">Admin</option>
+      </select>
+<label>Email</label>
+<input
+  type="email"
+  name="email"
+  required
+  pattern="^[a-zA-Z0-9._%+-]+@acropolis\.in$"
+  title="Only @acropolis.in emails are allowed"
+/>
+      <label>Password</label>
+      <input type="password" name="password" required />
+      <label>Enter CAPTCHA:</label>
+        <div class="captcha-box" id="signupCaptchaText"></div>
+        <input type="text" id="signupCaptchaInput" required />
+      <p class="note">* Your account will be activated after admin approval.</p>
+      <button type="submit">Register</button>
+    </form>
+    <p class="switch-link"><center>Already have an account? <a href="login.html">Login</a></center></p>
+  </div>
+</body>
+</html>
