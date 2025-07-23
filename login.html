@@ -11,6 +11,13 @@
   <div class="form-container">
     <h2>Login to CheckIT</h2>
     <form action="login_process.jsp" method="post" onsubmit="return validateCaptcha('loginCaptchaText', 'loginCaptchaInput')">
+        <label>Select Role</label>
+      <select name="role" required>
+        <option value="">--Select--</option>
+        <option value="Student">Student</option>
+        <option value="Faculty">Faculty</option>
+        <option value="Admin">Admin</option>
+      </select>
 <label>Email</label>
 <input
   type="email"
