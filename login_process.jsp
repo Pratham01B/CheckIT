@@ -1,10 +1,10 @@
 <%@ page import="java.sql.*, javax.servlet.http.*, javax.servlet.*" %>
-<%
+<%    
 String email = request.getParameter("email");
 String password = request.getParameter("password");
 try {
-    Class.forName("com.mysql.cj.jdbc.Driver");
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/CheckIT?useSSL=false", "root", "jiya23");
+    Class.forName("org.postgresql.Driver");
+    Connection conn = DriverManager.getConnection("jdbc:postgresql://db.qkijxgbzqjwhtepharsa.supabase.co:5432/postgres","postgres","AcroIt@2025");
     PreparedStatement ps = conn.prepareStatement("SELECT role FROM users WHERE email=? AND password=?");
     ps.setString(1, email);
     ps.setString(2, password);
