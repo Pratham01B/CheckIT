@@ -1,0 +1,725 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attendance Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      padding: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2e86de;
+    }
+
+    .form-section {
+      width: 90%;
+      margin: auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    select {
+      padding: 5px 10px;
+      margin: 10px 20px 10px 0;
+    }
+
+    table {
+      display: table;
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 25px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #2e86de;
+      color: white;
+    }
+
+    .submit-btn {
+      margin-top: 20px;
+      padding: 10px 25px;
+      background-color: #2e86de;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #1b4f72;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Attendance Form</h2>
+
+<div class="form-section">
+  <label for="faculty">Faculty Name:</label>
+  <select name="faculty" id="faculty" required>
+    <option value="">--Select Faculty--</option>
+    <option value="Prof. Shahida Khan">Prof. Shahida Khan</option>
+    <option value="Prof. Monika Choudhary">Prof. Monika Choudhary</option>
+      <option value="Prof. Deepak Singh Chouhan">Prof. Deepak Singh Chouhan</option>
+      <option value="Prof. Pawan Makhija">Prof. Pawan Makhija</option>
+      <option value="Prof. Pawan Kumar Gupta">Prof. Pawan Kumar Gupta</option>
+      <option value="Prof. Ankita Agrawal">Prof. Ankita Agrawal</option>
+      <option value="Prof. Kapil Sahu">Prof. Kapil Sahu</option>
+      <option value="Prof. Varsha Choudhary">Prof. Varsha Choudhary</option>
+      <option value="Prof. Disha Sharma">Prof. Disha Sharma</option>
+      <option value="Prof. Mayank Bhatt">Prof. Mayank Bhatt</option>
+      <option value="Prof.(Dr.) Manish Vyas">Prof.(Dr.) Manish Vyas</option>
+      <option value="Prof. Brajesh Chaturvedi">Prof. Brajesh Chaturvedi</option>
+      <option value="Prof. Mahendra Verma">Prof. Mahendra Verma</option>
+      <option value="Prof. Sanjana Sharma">Prof. Sanjana Sharma</option>
+      <option value="Prof. Reshma Shivhare">Prof. Reshma Shivhare</option>
+      <option value="Prof.(Dr.) Prashant Lakkadwala">Prof.(Dr.) Prashant Lakkadwala</option>
+  </select>
+
+  <label for="branch">Branch:</label>
+  <select name="branch" id="branch" required>
+    <option value="IT-1">IT-1</option>
+    <option value="IT-2">IT-2</option>
+  <option value="CSE-DS">CSE-DS</option>
+  </select>
+
+  <label for="year">Year:</label>
+  <select name="year" id="year" required>
+    <option value="II">II Year</option>
+  <option value="III">III Year</option>
+  <option value="IV">IV Year</option>
+  </select>
+
+  <label for="subject">Subject:</label>
+  <select name="subject" id="subject" required>
+    <option value="ADA">Analysis & Design of Algorithms (ADA)</option>
+      <option value="TOC">Theory of Computation (TOC)</option>
+      <option value="OS">Operating System</option>
+      <option value="PP">Python Programming</option>
+      <option value="AP">Android Programming</option>
+      <option value="DM">Data Mining</option>
+      <option value="MP1">Minor Project</option>
+      <option value="MP2">Major Project</option>
+      <option value="CDC">CDC</option>
+      <option value="BDA">BDA</option>
+      <option value="SE">Software Engineering</option>
+      <option value="NLP">NLP</option>
+      <option value="IDS">Introduction to DS</option>
+      <option value="CA">Computer Architecture</option>
+      <option value="BD">Big Data</option>
+      <option value="CD">Compiler Design</option>
+      <option value="DA">DA in IoT</option>
+      <option value="DBMS">Database Management System</option>
+      <option value="CGMM">Computer Graphics and Multimedia</option>
+      <option value="MATLAB">MATLAB</option>
+      <option value="IP">Internship</option>
+      <option value="AWS">AWS</option>
+      <option value="DS">Data Science</option>
+      <option value="DL">Deep Learning</option>
+      <option value="PDS">Python for Data Science</option>
+      <option value="DSA">Data Structure</option>
+      <option value="CN">Computer Networks</option>
+      <option value="IPCV">Image Processing and Computer Vision</option>
+      <option value="OSS">OSS</option>
+      <option value="BC">BlockChain</option>
+      
+  </select>
+
+  <label for="time">Time:</label>
+  <select name="time" id="time" required>
+    <option value="8:20AM-9:05AM">8:20 AM-9:05 AM</option>
+      <option value="8:20AM-9:50AM">8:20 AM-9:50 AM</option>
+      <option value="9:05AM-9:50AM">9:05 AM-9:50 AM</option>
+      <option value="9:05AM-10:40AM">9:05 AM-10:40 AM</option>
+      <option value="9:50AM-10:40AM">9:50 AM-10:40 AM</option>
+      <option value="10:30AM-11:20AM">10:30 AM-11:20 AM</option>
+      <option value="11:20AM-12:10PM">11:20 AM-12:10 PM</option>
+      <option value="12:10PM-1:00PM">12:10 PM-1:00 PM</option>
+      <option value="1:50PM-2:40PM">1:50 PM-2:40 PM</option>
+      <option value="2:40PM-3:30PM">2:40 PM-3:30 PM</option>
+      <option value="3:30PM-4:15PM">3:30 PM-4:15 PM</option>
+      <option value="4:15PM-5:00PM">4:15 PM-5:00 PM</option>
+      <option value="9:50AM-11:20AM">9:50 AM-11:20 AM</option>
+      <option value="10:30AM-12:10PM">10:30 AM-12:10 PM</option>
+      <option value="11:20AM-1:00PM">11:20 AM-1:00 PM</option>
+      <option value="1:50PM-3:30PM">1:50 PM-3:30 PM</option>
+      <option value="2:40PM-4:15PM">2:40 PM-4:15 PM</option>
+      <option value="3:30PM-5:00PM">3:30 PM-5:00 PM</option>
+  </select>
+
+  <table class="student-table" style="display: table;">
+    <tr><th>Sr.</th><th>Name</th><th>Enrollment</th><th>Attendance</th></tr>
+      <tr>
+        <tr><td>1</td><td>Kratika Jain</td><td>0827IT221079</td>
+  <td>
+    <input type="radio" name="0827IT221079" value="present" required> Present
+    <input type="radio" name="0827IT221079" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>2</td><td>Kunal Kushwah</td><td>0827IT221080</td>
+  <td>
+    <input type="radio" name="0827IT221080" value="present" required> Present
+    <input type="radio" name="0827IT221080" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>3</td><td>Kushagra Mandloi</td><td>0827IT221081</td>
+  <td>
+    <input type="radio" name="0827IT221081" value="present" required> Present
+    <input type="radio" name="0827IT221081" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>4</td><td>Kushagra Singh</td><td>0827IT221082</td>
+  <td>
+    <input type="radio" name="0827IT221082" value="present" required> Present
+    <input type="radio" name="0827IT221082" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>5</td><td>Lakshraj Singh</td><td>0827IT221083</td>
+  <td>
+    <input type="radio" name="0827IT221083" value="present" required> Present
+    <input type="radio" name="0827IT221083" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>6</td><td>Lori Patidar</td><td>0827IT221084</td>
+  <td>
+    <input type="radio" name="0827IT221084" value="present" required> Present
+    <input type="radio" name="0827IT221084" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>7</td><td>Mahak Padlaya</td><td>0827IT221085</td>
+  <td>
+    <input type="radio" name="0827IT221085" value="present" required> Present
+    <input type="radio" name="0827IT221085" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>8</td><td>Mahak Verma</td><td>0827IT221086</td>
+  <td>
+    <input type="radio" name="0827IT221086" value="present" required> Present
+    <input type="radio" name="0827IT221086" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>9</td><td>Manali Choudhary</td><td>0827IT221087</td>
+  <td>
+    <input type="radio" name="0827IT221087" value="present" required> Present
+    <input type="radio" name="0827IT221087" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>10</td><td>Manav Soni</td><td>0827IT221088</td>
+  <td>
+    <input type="radio" name="0827IT221088" value="present" required> Present
+    <input type="radio" name="0827IT221088" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>11</td><td>Manish Khede</td><td>0827IT221089</td>
+  <td>
+    <input type="radio" name="0827IT221089" value="present" required> Present
+    <input type="radio" name="0827IT221089" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>12</td><td>Manish Rathore</td><td>0827IT221090</td>
+  <td>
+    <input type="radio" name="0827IT221090" value="present" required> Present
+    <input type="radio" name="0827IT221090" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>13</td><td>Mauli Patel</td><td>0827IT221091</td>
+  <td>
+    <input type="radio" name="0827IT221091" value="present" required> Present
+    <input type="radio" name="0827IT221091" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>14</td><td>Mayank Jadhav</td><td>0827IT221092</td>
+  <td>
+    <input type="radio" name="0827IT221092" value="present" required> Present
+    <input type="radio" name="0827IT221092" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>15</td><td>Mayank Jaiswal</td><td>0827IT221093</td>
+  <td>
+    <input type="radio" name="0827IT221093" value="present" required> Present
+    <input type="radio" name="0827IT221093" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>16</td><td>Mayank Rathore</td><td>0827IT221094</td>
+  <td>
+    <input type="radio" name="0827IT221094" value="present" required> Present
+    <input type="radio" name="0827IT221094" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>17</td><td>Md. Hasib Gouri</td><td>0827IT221095</td>
+  <td>
+    <input type="radio" name="0827IT221095" value="present" required> Present
+    <input type="radio" name="0827IT221095" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>18</td><td>Meet Sharma</td><td>0827IT221096</td>
+  <td>
+    <input type="radio" name="0827IT221096" value="present" required> Present
+    <input type="radio" name="0827IT221096" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>19</td><td>Mohammad Rizwan</td><td>0827IT221097</td>
+  <td>
+    <input type="radio" name="0827IT221097" value="present" required> Present
+    <input type="radio" name="0827IT221097" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>20</td><td>Mohit Singh Sisodiya</td><td>0827IT221098</td>
+  <td>
+    <input type="radio" name="0827IT221098" value="present" required> Present
+    <input type="radio" name="0827IT221098" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>21</td><td>Narendra Raghuwanshi</td><td>0827IT221099</td>
+  <td>
+    <input type="radio" name="0827IT221099" value="present" required> Present
+    <input type="radio" name="0827IT221099" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>22</td><td>Navneet Sourathiya</td><td>0827IT221100</td>
+  <td>
+    <input type="radio" name="0827IT221100" value="present" required> Present
+    <input type="radio" name="0827IT221100" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>23</td><td>Nivedita Nigam</td><td>0827IT221101</td>
+  <td>
+    <input type="radio" name="0827IT221101" value="present" required> Present
+    <input type="radio" name="0827IT221101" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>24</td><td>Om Patil</td><td>0827IT221102</td>
+  <td>
+    <input type="radio" name="0827IT221102" value="present" required> Present
+    <input type="radio" name="0827IT221102" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>25</td><td>Palak Sanjay Gajbhiye</td><td>0827IT221103</td>
+  <td>
+    <input type="radio" name="0827IT221103" value="present" required> Present
+    <input type="radio" name="0827IT221103" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>26</td><td>Palak Shivhare</td><td>0827IT221104</td>
+  <td>
+    <input type="radio" name="0827IT221104" value="present" required> Present
+    <input type="radio" name="0827IT221104" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>27</td><td>Parakram Singh</td><td>0827IT221105</td>
+  <td>
+    <input type="radio" name="0827IT221105" value="present" required> Present
+    <input type="radio" name="0827IT221105" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>28</td><td>Piyush Modi</td><td>0827IT221106</td>
+  <td>
+    <input type="radio" name="0827IT221106" value="present" required> Present
+    <input type="radio" name="0827IT221106" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>29</td><td>Piyush Patil</td><td>0827IT221107</td>
+  <td>
+    <input type="radio" name="0827IT221107" value="present" required> Present
+    <input type="radio" name="0827IT221107" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>30</td><td>Poornima Hada</td><td>0827IT221108</td>
+  <td>
+    <input type="radio" name="0827IT221108" value="present" required> Present
+    <input type="radio" name="0827IT221108" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>31</td><td>Prarthana Purohit</td><td>0827IT221109</td>
+  <td>
+    <input type="radio" name="0827IT221109" value="present" required> Present
+    <input type="radio" name="0827IT221109" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>32</td><td>Prashansa Barot</td><td>0827IT221110</td>
+  <td>
+    <input type="radio" name="0827IT221110" value="present" required> Present
+    <input type="radio" name="0827IT221110" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>33</td><td>Prashant Sharma</td><td>0827IT221111</td>
+  <td>
+    <input type="radio" name="0827IT221111" value="present" required> Present
+    <input type="radio" name="0827IT221111" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>34</td><td>Pratham Bothra</td><td>0827IT221112</td>
+  <td>
+    <input type="radio" name="0827IT221112" value="present" required> Present
+    <input type="radio" name="0827IT221112" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>35</td><td>Pratham Gupta</td><td>0827IT221113</td>
+  <td>
+    <input type="radio" name="0827IT221113" value="present" required> Present
+    <input type="radio" name="0827IT221113" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>36</td><td>Praveen Patel</td><td>0827IT221114</td>
+  <td>
+    <input type="radio" name="0827IT221114" value="present" required> Present
+    <input type="radio" name="0827IT221114" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>37</td><td>Prem Kushwah</td><td>0827IT221115</td>
+  <td>
+    <input type="radio" name="0827IT221115" value="present" required> Present
+    <input type="radio" name="0827IT221115" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>38</td><td>Pritam Kushwah</td><td>0827IT221116</td>
+  <td>
+    <input type="radio" name="0827IT221116" value="present" required> Present
+    <input type="radio" name="0827IT221116" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>39</td><td>Priyal Khandelwal</td><td>0827IT221117</td>
+  <td>
+    <input type="radio" name="0827IT221117" value="present" required> Present
+    <input type="radio" name="0827IT221117" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>40</td><td>Priyansh Bahore</td><td>0827IT221118</td>
+  <td>
+    <input type="radio" name="0827IT221118" value="present" required> Present
+    <input type="radio" name="0827IT221118" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>41</td><td>Rampal Solanki</td><td>0827IT221119</td>
+  <td>
+    <input type="radio" name="0827IT221119" value="present" required> Present
+    <input type="radio" name="0827IT221119" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>42</td><td>Riddhi Pathak</td><td>0827IT221120</td>
+  <td>
+    <input type="radio" name="0827IT221120" value="present" required> Present
+    <input type="radio" name="0827IT221120" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>43</td><td>Rishi Bhargav</td><td>0827IT221121</td>
+  <td>
+    <input type="radio" name="0827IT221121" value="present" required> Present
+    <input type="radio" name="0827IT221121" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>44</td><td>Rohit Sahu</td><td>0827IT221123</td>
+  <td>
+    <input type="radio" name="0827IT221123" value="present" required> Present
+    <input type="radio" name="0827IT221123" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>45</td><td>Roshan Gorakhpurkar</td><td>0827IT221124</td>
+  <td>
+    <input type="radio" name="0827IT221124" value="present" required> Present
+    <input type="radio" name="0827IT221124" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>46</td><td>Rupesh Pawar</td><td>0827IT221125</td>
+  <td>
+    <input type="radio" name="0827IT221125" value="present" required> Present
+    <input type="radio" name="0827IT221125" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>47</td><td>Sahaj Tripathi</td><td>0827IT221126</td>
+  <td>
+    <input type="radio" name="0827IT221126" value="present" required> Present
+    <input type="radio" name="0827IT221126" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>48</td><td>Sakshi Pandya</td><td>0827IT221127</td>
+  <td>
+    <input type="radio" name="0827IT221127" value="present" required> Present
+    <input type="radio" name="0827IT221127" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>49</td><td>Saloni Jain</td><td>0827IT221128</td>
+  <td>
+    <input type="radio" name="0827IT221128" value="present" required> Present
+    <input type="radio" name="0827IT221128" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>50</td><td>Samarth Saxena</td><td>0827IT221130</td>
+  <td>
+    <input type="radio" name="0827IT221130" value="present" required> Present
+    <input type="radio" name="0827IT221130" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>51</td><td>Sanskriti Chouksay</td><td>0827IT221131</td>
+  <td>
+    <input type="radio" name="0827IT221131" value="present" required> Present
+    <input type="radio" name="0827IT221131" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>52</td><td>Sarthak Kacholiya</td><td>0827IT221132</td>
+  <td>
+    <input type="radio" name="0827IT221132" value="present" required> Present
+    <input type="radio" name="0827IT221132" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>53</td><td>Sarthak Sharma</td><td>0827IT221133</td>
+  <td>
+    <input type="radio" name="0827IT221133" value="present" required> Present
+    <input type="radio" name="0827IT221133" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>54</td><td>Shivanshu Soni</td><td>0827IT221134</td>
+  <td>
+    <input type="radio" name="0827IT221134" value="present" required> Present
+    <input type="radio" name="0827IT221134" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>55</td><td>Shruti Sharma</td><td>0827IT221136</td>
+  <td>
+    <input type="radio" name="0827IT221136" value="present" required> Present
+    <input type="radio" name="0827IT221136" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>56</td><td>Sneha Shrivastava</td><td>0827IT221137</td>
+  <td>
+    <input type="radio" name="0827IT221137" value="present" required> Present
+    <input type="radio" name="0827IT221137" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>57</td><td>Suhani Bhatt</td><td>0827IT221138</td>
+  <td>
+    <input type="radio" name="0827IT221138" value="present" required> Present
+    <input type="radio" name="0827IT221138" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>58</td><td>Sumit Verma</td><td>0827IT221139</td>
+  <td>
+    <input type="radio" name="0827IT221139" value="present" required> Present
+    <input type="radio" name="0827IT221139" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>59</td><td>Sunil Verma</td><td>0827IT221140</td>
+  <td>
+    <input type="radio" name="0827IT221140" value="present" required> Present
+    <input type="radio" name="0827IT221140" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>60</td><td>Tanish Panchal</td><td>0827IT221141</td>
+  <td>
+    <input type="radio" name="0827IT221141" value="present" required> Present
+    <input type="radio" name="0827IT221141" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>61</td><td>Tanishka Karray</td><td>0827IT221142</td>
+  <td>
+    <input type="radio" name="0827IT221142" value="present" required> Present
+    <input type="radio" name="0827IT221142" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>62</td><td>Tanmay</td><td>0827IT221143</td>
+  <td>
+    <input type="radio" name="0827IT221143" value="present" required> Present
+    <input type="radio" name="0827IT221143" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>63</td><td>Tanmay Barange</td><td>0827IT221144</td>
+  <td>
+    <input type="radio" name="0827IT221144" value="present" required> Present
+    <input type="radio" name="0827IT221144" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>64</td><td>Tanush Khatri</td><td>0827IT221145</td>
+  <td>
+    <input type="radio" name="0827IT221145" value="present" required> Present
+    <input type="radio" name="0827IT221145" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>65</td><td>Udit Gurjar</td><td>0827IT221146</td>
+  <td>
+    <input type="radio" name="0827IT221146" value="present" required> Present
+    <input type="radio" name="0827IT221146" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>66</td><td>Urvashi Yadav</td><td>0827IT221147</td>
+  <td>
+    <input type="radio" name="0827IT221147" value="present" required> Present
+    <input type="radio" name="0827IT221147" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>67</td><td>Uttam Barve</td><td>0827IT221148</td>
+  <td>
+    <input type="radio" name="0827IT221148" value="present" required> Present
+    <input type="radio" name="0827IT221148" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>68</td><td>Vikas Bhamoriya</td><td>0827IT221149</td>
+  <td>
+    <input type="radio" name="0827IT221149" value="present" required> Present
+    <input type="radio" name="0827IT221149" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>69</td><td>Vikas Dhakad</td><td>0827IT221150</td>
+  <td>
+    <input type="radio" name="0827IT221150" value="present" required> Present
+    <input type="radio" name="0827IT221150" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>70</td><td>Vishal Sharma</td><td>0827IT221151</td>
+  <td>
+    <input type="radio" name="0827IT221151" value="present" required> Present
+    <input type="radio" name="0827IT221151" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>71</td><td>Vivek Yadav</td><td>0827IT221152</td>
+  <td>
+    <input type="radio" name="0827IT221152" value="present" required> Present
+    <input type="radio" name="0827IT221152" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>72</td><td>Yash Ahirwal</td><td>0827IT221153</td>
+  <td>
+    <input type="radio" name="0827IT221153" value="present" required> Present
+    <input type="radio" name="0827IT221153" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>73</td><td>Yash Bhawsar</td><td>0827IT221154</td>
+  <td>
+    <input type="radio" name="0827IT221154" value="present" required> Present
+    <input type="radio" name="0827IT221154" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>74</td><td>Yash Chordiya</td><td>0827IT221155</td>
+  <td>
+    <input type="radio" name="0827IT221155" value="present" required> Present
+    <input type="radio" name="0827IT221155" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>75</td><td>Yashwardhan Sharma</td><td>0827IT221156</td>
+  <td>
+    <input type="radio" name="0827IT221156" value="present" required> Present
+    <input type="radio" name="0827IT221156" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>76</td><td>Mohit Sharma</td><td>0827IT233D06</td>
+  <td>
+    <input type="radio" name="0827IT233D06" value="present" required> Present
+    <input type="radio" name="0827IT233D06" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>77</td><td>Parth Bhavsar</td><td>0827IT233D07</td>
+  <td>
+    <input type="radio" name="0827IT233D07" value="present" required> Present
+    <input type="radio" name="0827IT233D07" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>78</td><td>Rajvardhan</td><td>0827IT233D08</td>
+  <td>
+    <input type="radio" name="0827IT233D08" value="present" required> Present
+    <input type="radio" name="0827IT233D08" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>79</td><td>Shivani Bafna</td><td>0827IT233D09</td>
+  <td>
+    <input type="radio" name="0827IT233D09" value="present" required> Present
+    <input type="radio" name="0827IT233D09" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>80</td><td>Shubham Vishwakarma</td><td>0827IT233D10</td>
+  <td>
+    <input type="radio" name="0827IT233D10" value="present" required> Present
+    <input type="radio" name="0827IT233D10" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>81</td><td>Suyash Panchal</td><td>0827IT233D11</td>
+  <td>
+    <input type="radio" name="0827IT233D11" value="present" required> Present
+    <input type="radio" name="0827IT233D11" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>82</td><td>Updesh Dangi</td><td>0827IT233D12</td>
+  <td>
+    <input type="radio" name="0827IT233D12" value="present" required> Present
+    <input type="radio" name="0827IT233D12" value="absent"> Absent
+  </td>
+</tr>
+<tr><td>83</td><td>Vishal Patidar</td><td>0827YC221068</td>
+  <td>
+    <input type="radio" name="0827YC221068" value="present" required> Present
+    <input type="radio" name="0827YC221068" value="absent"> Absent
+  </td>
+</tr>
+  </table>
+
+  <button type="button" class="submit-btn" onclick="downloadAttendance()">Submit Attendance</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script>
+function downloadAttendance() {
+    const tables = document.querySelectorAll(".student-table");
+    let visibleTable = null;
+
+    tables.forEach(table => {
+        const style = getComputedStyle(table);
+        if (style.display !== "none") {
+            visibleTable = table;
+        }
+    });
+
+    if (!visibleTable) {
+        alert("Please select a branch and year to show the student list.");
+        return;
+    }
+
+    const rows = Array.from(visibleTable.querySelectorAll("tr")).slice(1); // skip header
+    const attendanceData = rows.map(row => {
+        const cells = row.querySelectorAll("td");
+        const name = cells[1].textContent.trim();
+        const enrollment = cells[2].textContent.trim();
+        const present = cells[3].querySelector("input[value='present']").checked ? "Present" : "Absent";
+        return {
+            Name: name,
+            Enrollment: enrollment,
+            Attendance: present
+        };
+    });
+
+    const faculty = document.getElementById("faculty").value;
+    const subject = document.getElementById("subject").value;
+    const branch = document.getElementById("branch").value;
+    const year = document.getElementById("year").value;
+    const time = document.getElementById("time").value;
+
+    const ws = XLSX.utils.json_to_sheet([
+        { Name: `Faculty: ${faculty}`, Enrollment: `Subject: ${subject}`, Attendance: `Time: ${time} | Branch: ${branch} | Year: ${year}` },
+        {},
+        ...attendanceData
+    ]);
+
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Attendance");
+
+    const filename = `Attendance_${branch}_${year}_${subject}_${new Date().toISOString().slice(0,10)}.xlsx`;
+    XLSX.writeFile(wb, filename);
+}
+</script>
+</body>
+</html>
